@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header className='header'>
+        <div className='container'>
+
+            <nav className='header_nav nav'>
+                <a href="" className='header_logo'>
+                    <img src='https://upload.wikimedia.org/wikipedia/commons/1/13/5element_logo.svg' />
+                </a>
+
+                <div className='nav-search'>
+                    <div className='header_catalog'>
+                        <FiAlignLeft />
+                        <p>Каталог</p>
+                    </div>
+
+                    <div className='header_search'>
+                        <input placeholder='Поиск товаров' />
+                        <div className='search-icon-wrap'>
+                            <FiSearch className='search-icon' />
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <ul className='header_list list'>
+                <li className='header_item list-icon-comparison'>
+                    <FiBarChart2 className='list-icon-comparison icon'/>
+                    {/* <p>Сравнение</p> */}
+                </li>
+                <li className='header_item list-icon-cart'>
+                    <FiShoppingCart className='list-icon-cart icon' />
+                    {/* <p>Корзина</p> */}
+                </li>
+                <li className='header_item list-icon-user'>
+                    <FiUser className='list-icon-user icon' />
+                    {/* <p>Войти</p> */}
+                </li>
+            </ul>
+
+        </div>
+    </header>
+
+
+</body>
+</html>

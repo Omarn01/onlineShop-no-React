@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+    <style>
+        .header {
+    height: 80px;
+    border-bottom: 1px solid whitesmoke;
+    border-radius: 0 5px 5px;
+    margin-top: 20px
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 80px
+}
+.nav-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.header_list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.header_catalog {
+    margin: 0;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #e31235;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 19px;
+    gap: 10px;
+    transition: opacity .3s
+}
+.header_catalog p {
+    margin: 0;
+}
+.header_catalog:hover {
+    opacity: .9;
+}
+.header_search input {
+    border: none;
+    outline: none;
+    border: 1px solid silver;
+    height: 53px;
+    width: 600px;
+    border-radius: 3px;
+    font-size: 16px;
+    padding: 0 10px
+}
+.header_search {
+    display: flex;
+    position: relative;
+}
+.search-icon-wrap {
+    width: 50px;
+    height: 50px;
+    background-color: #e31235;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2px;
+    border-radius: 3px;
+    transition: opacity .4s;
+    cursor: pointer;
+
+
+}
+.search-icon {
+    font-size: 20px;
+    margin: 50%;
+    transform: translate(-50%, -50%);
+}
+.search-icon-wrap:hover {
+    opacity: .8;
+}
+.header_list {
+    gap: 30px;
+}
+.header_item {
+    height: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+.icon {
+    width: 100%;
+    font-size: 22px;
+}
+.list-icon-cart::after {
+    content: 'Корзина';
+}
+.list-icon-user::after {
+    content: 'Войти';
+}
+.list-icon-comparison::after {
+    content: 'Сравнение';
+    width: 100%;
+}
+
+@media (max-width: 1300px) {
+    .header_search input {
+        width: 500px;
+    }
+    .container {
+        gap: 30px
+    }
+}
+
+@media (max-width: 1220px) {
+    .header_search input {
+        width: 400px;
+    }
+    .header_list {
+        gap: 40px
+    }
+}
+@media (max-width: 1175px) {
+    .header_search input {
+        width: 350px;
+    }
+    .header_list {
+        gap: 30px
+    }
+}
+@media (max-width: 1100px) {
+    .header_search input {
+        width: 600px;
+    }
+    .header_list {
+        gap: 20px
+    }
+    .nav {
+        gap: 20px
+    }
+}
+@media (max-width: 1100px) {
+    .header_search input {
+        width: 250px;
+    }
+    .header_list {
+        gap: 40px
+    }
+    .nav {
+        gap: 20px
+    }
+    .header_logo {
+        width: 35px;
+        overflow: hidden;
+    }
+}
+@media (max-width: 880px) {
+    .header {
+        height: 60px;
+        margin-top: 15px;
+    }
+    .header_search input {
+        width: 250px;
+    }
+    .header_list {
+        gap: 10px
+    }
+    .nav {
+        gap: 20px
+    }
+    .header_logo {
+        width: 35px;
+        overflow: hidden;
+    }
+    .header_catalog {
+        padding: 10px 20px
+    }
+    .header_search input {
+        height: 45px;
+    }
+    .search-icon-wrap {
+        width: 44px;
+        height: 44px;
+    }
+}
+@media (max-width: 740px) {
+    .list-icon-cart::after, .list-icon-comparison::after, .list-icon-user::after {
+        content: '';
+    }
+    .header_list {
+        gap: 30px
+    }
+}
+@media (max-width: 668px) {
+    .header_list {
+        display: none;
+    }
+    .header_search input {
+        width: 400px;
+        height: 38px;
+    }
+    .search-icon-wrap {
+        height: 38px;
+        width: 38px;
+        font-size: 14px;
+    }
+    .header_catalog p {
+        display: none
+    }
+    .header_catalog {
+        padding: 10px;
+    }
+}
+@media (max-width: 580px) {
+    .header_search input {
+        width: 320px;
+    }
+}
+@media (max-width: 490px) {
+    .header_search input {
+        width: 250px;
+    }
+}
+@media (max-width: 420px) {
+    .header_search input {
+        width: 180px;
+    }
+}
+    </style>
+</head>
+<body>
+    <header className='header'>
+        <div className='container'>
+
+            <nav className='header_nav nav'>
+                <a href="" className='header_logo'>
+                    <img src='https://upload.wikimedia.org/wikipedia/commons/1/13/5element_logo.svg' />
+                </a>
+
+                <div className='nav-search'>
+                    <div className='header_catalog'>
+                        <FiAlignLeft />
+                        <p>Каталог</p>
+                    </div>
+
+                    <div className='header_search'>
+                        <input placeholder='Поиск товаров' />
+                        <div className='search-icon-wrap'>
+                            <FiSearch className='search-icon' />
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <ul className='header_list list'>
+                <li className='header_item list-icon-comparison'>
+                    <FiBarChart2 className='list-icon-comparison icon'/>
+                    <p>Сравнение</p>
+                </li>
+                <li className='header_item list-icon-cart'>
+                    <FiShoppingCart className='list-icon-cart icon' />
+                    <p>Корзина</p>
+                </li>
+                <li className='header_item list-icon-user'>
+                    <FiUser className='list-icon-user icon' />
+                    <p>Войти</p>
+                </li>
+            </ul>
+
+        </div>
+    </header>
+
+
+</body>
+</html>

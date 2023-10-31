@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <title>Online Shop | Home</title>
+
+
+</head>
+<body>
+    <header class='header'>
+        <div class='container'>
+
+            <nav class='header_nav nav'>
+                <a href="/" class='header_logo'>
+                    <img src='https://upload.wikimedia.org/wikipedia/commons/1/13/5element_logo.svg' />
+                </a>
+
+                <div class='nav-search'>
+                    <div class='header_catalog'>
+                        <img class="catalog-img" src="/catalog.png" alt="">
+                        <p>Каталог</p>
+                    </div>
+
+                    <div class='header_search'>
+                        <input placeholder='Поиск товаров' />
+                        <div class='search-icon-wrap'>
+                            <img class="search-icon" src="/search-interface-symbol.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <ul class='header_list list'>
+                <li class='header_item list-icon-comparison'>
+                    <a href="/support">
+                        <img src="/question.png" alt="">
+                    </a>
+                </li>
+                <li class='header_item list-icon-cart'>
+                    <a href="/cart">
+                        <img src="/shopping-cart.png" alt="">
+                    </a>
+                </li>
+                <li class='header_item list-icon-user'>
+                    <a href="/user">
+                        <img src="/user.png" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </header>
+
+    <div class="container catalog_container hide">
+        <section class="catalog">
+             <div class="catalog_backgroung">
+                <ul class="catalog_list">
+                    <li class="catalog_item">
+                        <a href="/phones">Смартфоны</a>
+                    </li>
+                    <li class="catalog_item">
+                        <a href="/watches">Умные часы</a>
+                    </li>
+                    <li class="catalog_item">
+                        <a href="/tabs">Планшеты</a>
+                    </li>
+                    <li class="catalog_item">
+                        <a href="/headphonesForm">Наушники</a>
+                    </li>
+                    <li class="catalog_item">
+                        <a href="/accessoriesForm">Акксессуары для телефонов</a>
+                    </li>
+                </ul>
+             </div>
+        </section>
+    </div>
+
+    <h2 class="title">Товары с лучшей оценкой</h2>
+
+    <section class="content">
+        <ul class="content_list">
+            <% if (wirelessCharger.length) { %>
+                <% wirelessCharger.forEach(({ img, name, description, amount, rating, price }) => { %>
+                        <li class="content_item">
+                            <div class='card'>
+                                <img src=<%= img %> />
+                                <div class="card_content">
+                                    <h2 class='card_name'><%= name %></h2>
+                                    <p class='description'><%= description %></p>
+                                    <div class='amount'>В наличии: <%= amount %> шт</div>
+                                    <input type='checkbox'/>
+                                    <div class='rating'>Рейтинг:  <%= rating %></div>
+                                    <div class="card_price-block">
+                                        <p class='price'>Цена: <%= price %> ₽</p>
+                                        <div>
+                                            <button class="inCartButton">В корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
+                        </li>
+                <% }) %>
+            <% } %>
+        </ul>
+        
+        <div class="btn-center">
+            <button class="show-more">Показать еще</button>
+        </div>
+    </section>
+
+
+    <script src="/script.js"></script>
+    <script src="/showMore.js"></script>
+</body>
+</html>
